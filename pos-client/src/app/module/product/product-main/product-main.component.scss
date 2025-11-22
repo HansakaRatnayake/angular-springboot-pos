@@ -1,0 +1,66 @@
+.product-main-outer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  flex: 1;
+  //border: 1px solid #670df8;
+  background: #FFFFFFFF;
+
+
+  .product-header-outer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    //border: 1px solid #670df8;
+  }
+
+  app-header {
+    .account {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      font-family: 'Catamaran';
+      font-weight: 600;
+      font-size: 18px;
+
+      mat-icon {
+        width: 20px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+
+      span {
+        font-family: 'Catamaran';
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .product-context-outer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 10px;
+    overflow: auto;
+
+  }
+
+
+}

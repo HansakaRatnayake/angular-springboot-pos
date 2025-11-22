@@ -1,0 +1,10 @@
+<mat-form-field appearance="outline">
+  <mat-label>Search Customer</mat-label>
+  <input matInput [(ngModel)]="searchText" (ngModelChange)="onValueChange($event)" value="{{searchText}}">
+</mat-form-field>
+
+<div class="search-result">
+  <ul>
+    <li *ngFor="let datum of filteredData" (click)="onValueSelect(datum)">{{datum?.customerName}}</li>
+  </ul>
+</div>

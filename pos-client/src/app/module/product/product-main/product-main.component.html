@@ -1,0 +1,20 @@
+<div class="product-main-outer">
+  <div class="product-header-outer">
+    <app-header>
+      <div class="account">
+        <mat-icon>verified_user</mat-icon>
+        {{ user }} | &nbsp; <span>Admin account</span>
+      </div>
+    </app-header>
+  </div>
+
+  <div class="product-context-outer">
+    <app-product-tool-bar
+      (textChange)="updateSearchText($event)"
+    />
+    <app-product-list
+      [searchText]="searchText"
+    />
+  </div>
+
+</div>

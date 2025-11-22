@@ -1,0 +1,17 @@
+<div class="input-field-outer">
+  <mat-form-field appearance="outline">
+    <mat-label>Select items</mat-label>
+    <input matInput  [disabled]="isItemDisabled" [(ngModel)]="searchText" (ngModelChange)="onValueChange($event)" value="{{searchText}}" placeholder="Search items for select" >
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>qty</mat-label>
+    <input type="number" [disabled]="isQtyDisabled" matInput [(ngModel)]="qty" (ngModelChange)="onQtyValue($event)" >
+  </mat-form-field>
+</div>
+
+<div class="search-result">
+  <ul>
+    <li *ngFor="let datum of filteredData" (click)="onValueSelect(datum)">{{datum?.id}}</li>
+  </ul>
+</div>

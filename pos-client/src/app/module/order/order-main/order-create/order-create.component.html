@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Create New Order</h2>
+
+<mat-dialog-content class="mat-typography">
+  <br>
+  <app-customer-select-search (selectedCustomer)="manageSelectedCustomer($event)"/>
+  <div *ngFor="let itemComponent of manageItemSearchComponent; let i = index" class="item-select-outer">
+    <app-item-select-search
+      [isItemAdded]="isItemAdded"
+      (selectedItem)="manageSelectedItem($event)"
+      (itemQty)="manageQty($event)">
+    </app-item-select-search>
+
+    <button mat-fab class="warn-button" (click)="removeItem(i)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <button mat-stroked-button (click)="addItemComponent()"><mat-icon>add_circle</mat-icon>Add New Item</button>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <div>
+    <span>nett : {{nett}}</span>
+  </div>
+  <div>
+    <button mat-button mat-dialog-close  color="warn">Cancel</button>
+    <button mat-button type="button" (click)="order()">Order</button>
+  </div>
+</mat-dialog-actions>
+

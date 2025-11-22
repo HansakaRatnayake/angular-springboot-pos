@@ -1,0 +1,41 @@
+<div class="side-panel-bar-outer">
+  <div class="logo-outer">
+    <img src="/assets/images/logo2.png" alt="image">
+  </div>
+
+  <div class="icon-bar-outer">
+    <div class="icon-outer" routerLink="/dashboard" routerLinkActive="active">
+      <mat-icon fontIcon="dashboard"></mat-icon>
+      <span>Overview</span>
+    </div>
+    <div class="icon-outer" routerLink="/products" routerLinkActive="active">
+      <mat-icon fontIcon="inventory_2"></mat-icon>
+      <span>Products</span>
+    </div>
+    <div class="icon-outer" routerLink="/orders" routerLinkActive="active">
+      <mat-icon>shopping_cart</mat-icon>
+      <span>Order</span>
+    </div>
+    <div class="icon-outer" routerLink="/customers" routerLinkActive="active">
+      <mat-icon>group</mat-icon>
+      <span>Customer</span>
+    </div>
+    <div class="icon-outer" routerLink="/mail" routerLinkActive="active">
+      <mat-icon>mail</mat-icon>
+      <span>Mail</span>
+    </div>
+    <div class="icon-outer" routerLink="/settings" routerLinkActive="active">
+      <mat-icon>tune</mat-icon>
+      <span>Settings</span>
+    </div>
+  </div>
+
+  <div class="avatar-bar-outer">
+    <div class="avatar-icon-outer" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </div>
+
+  </div>
+
+</div>

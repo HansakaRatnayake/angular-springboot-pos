@@ -1,0 +1,49 @@
+<table mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id. </th>
+    <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <td mat-cell *matCellDef="let product"> {{product.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="unitPrice">
+    <th mat-header-cell *matHeaderCellDef> UnitPrice </th>
+    <td mat-cell *matCellDef="let product"> {{product.unitPrice}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="qtyOnHand">
+    <th mat-header-cell *matHeaderCellDef> QtyOnHand </th>
+    <td mat-cell *matCellDef="let product"> {{product.qtyOnHand}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let product">
+      <button mat-stroked-button color="primary" (click)="openUpdateProductDialogBox(product)">
+        <mat-icon>edit</mat-icon>
+        Update
+      </button>
+      &nbsp;
+      <button mat-flat-button color="warn" class="btndelete" (click)="openDeleteConfirmDialogBox(product)">
+        <mat-icon>delete</mat-icon>
+        Delete
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+               [pageIndex]="page"
+               [length]="count"
+               [pageSize]="size"
+               (page)="getServerData($event)"
+               showFirstLastButtons
+               aria-label="Select page of periodic elements">
+</mat-paginator>

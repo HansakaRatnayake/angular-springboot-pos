@@ -1,0 +1,20 @@
+<div class="order-main-outer">
+  <div class="order-header-outer">
+    <app-header>
+      <div class="account">
+        <mat-icon>verified_user</mat-icon>
+        {{user}} | &nbsp; <span>Admin account</span>
+      </div>
+    </app-header>
+  </div>
+
+  <div class="order-context-outer">
+    <app-order-tool-bar
+      (textChange)="updateSearchText($event)"
+    />
+    <app-order-list
+      [searchText]="searchText"
+    />
+  </div>
+
+</div>

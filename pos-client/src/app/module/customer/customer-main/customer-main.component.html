@@ -1,0 +1,19 @@
+<div class="customer-main-outer">
+  <div class="customer-header-outer">
+    <app-header>
+      <div class="account">
+        <mat-icon>verified_user</mat-icon>
+        {{user}} | &nbsp; <span>Admin account</span>
+      </div>
+    </app-header>
+  </div>
+
+  <div class="customer-context-outer">
+    <app-customer-tool-bar
+      (textChange)="updateSearchText($event)"
+    />
+    <app-customer-list
+    [searchText]="searchText"
+    />
+  </div>
+</div>

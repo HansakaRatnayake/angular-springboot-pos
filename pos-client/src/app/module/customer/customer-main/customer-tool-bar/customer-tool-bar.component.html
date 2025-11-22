@@ -1,0 +1,33 @@
+<mat-card appearance="outlined" class="search-add-card">
+  <mat-card-header>Customer Management</mat-card-header>
+  <mat-card-content class="search-outer">
+    <div class="txt-search-outer">
+      <form [formGroup]="searchform">
+        <div class="search-fields">
+          <mat-form-field appearance="outline">
+            <mat-label>Search customers...</mat-label>
+            <input matInput formControlName="text" (input)="onInputChange()">
+            <mat-icon matPrefix>
+              <span class="material-symbols-outlined">
+              search
+              </span>
+            </mat-icon>
+          </mat-form-field>
+        </div>
+
+        &nbsp;
+        <div class="btn-product-outer">
+          <button mat-stroked-button color="warn" (click)="resetFilter()">
+            <mat-icon>restart_alt</mat-icon>
+            Reset Filters
+          </button>
+          &nbsp;
+          <button mat-flat-button (click)="openNewCustomerDialogBox()">
+            <mat-icon>add_circle</mat-icon>
+            New Customer
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>

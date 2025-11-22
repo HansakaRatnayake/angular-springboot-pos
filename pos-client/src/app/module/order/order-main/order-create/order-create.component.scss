@@ -1,0 +1,39 @@
+mat-form-field{
+  width: 100%;
+}
+
+
+.item-select-outer{
+  display: flex;
+  //width: 100%;
+  height: auto;
+  gap: 15px;
+}
+
+.warn-button {
+  background-color: #980702 !important; /* Angular Material 'warn' default color */
+  color: white !important;
+}
+
+mat-dialog-actions{
+  display: flex;
+  //border: 1px solid red !important;
+
+  div{
+    width: 50%;
+    //border: 1px solid red !important;
+    display: flex!important;
+    align-items: center;
+  }
+
+  div:nth-child(1){
+    justify-content: start;
+
+    span{
+      font-size: 20px;
+    }
+  }
+  div:nth-child(2){
+    justify-content: end;
+  }
+}

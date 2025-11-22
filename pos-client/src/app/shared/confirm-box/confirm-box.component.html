@@ -1,0 +1,9 @@
+<h3 mat-dialog-title>Confirm Message</h3>
+<mat-dialog-content class="mat-typography">
+      <mat-label>{{message}}</mat-label>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" [mat-dialog-close]="true">Yes</button>
+  <button mat-button mat-dialog-close>No</button>
+</mat-dialog-actions>

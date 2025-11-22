@@ -1,0 +1,9 @@
+<div class="app-main-outer">
+  <div *ngIf="isAuthenticated" class="sidenav">
+    <app-side-nav></app-side-nav>
+  </div>
+  <div class="router-outlet-context">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
